@@ -24,29 +24,29 @@ export const statusCarousel = [
         name: "rohit-sharma",
         id:5
     },
-    {
-        img:"https://cdn-icons-png.flaticon.com/512/1177/1177568.png",
-        name: "hardik-pandya",
-        id:6
-    }, 
-    {
-        img:"https://cdn-icons-png.flaticon.com/512/706/706830.png",
-        name: "Krunal_pandya",
-        id:7
-    }, 
-    {
-        img: "https://cdn-icons-png.flaticon.com/512/706/706816.png",
-        name: "messi",
-        id:8
-    }, 
-    {
-        img:"https://cdn-icons-png.flaticon.com/512/805/805370.png",
-        name: "ronaldo",
-        id:9
-    }, 
-    {
-        img:"https://i.pinimg.com/564x/dd/ec/16/ddec160e29770ee9622220bf99d56359.jpg",
-        name: "ronaldhino",
-        id:10
-    }
+    // {
+    //     img:"https://cdn-icons-png.flaticon.com/512/1177/1177568.png",
+    //     name: "hardik-pandya",
+    //     id:6
+    // }, 
+    // {
+    //     img:"https://cdn-icons-png.flaticon.com/512/706/706830.png",
+    //     name: "Krunal_pandya",
+    //     id:7
+    // }, 
+    // {
+    //     img: "https://cdn-icons-png.flaticon.com/512/706/706816.png",
+    //     name: "messi",
+    //     id:8
+    // }, 
+    // {
+    //     img:"https://cdn-icons-png.flaticon.com/512/805/805370.png",
+    //     name: "ronaldo",
+    //     id:9
+    // }, 
+    // {
+    //     img:"https://i.pinimg.com/564x/dd/ec/16/ddec160e29770ee9622220bf99d56359.jpg",
+    //     name: "ronaldhino",
+    //     id:10
+    // }
     ];

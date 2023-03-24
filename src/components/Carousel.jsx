@@ -9,10 +9,11 @@ import ReactModal from "react-modal";
 
 import "./Carousel.css";
 import { statusCarousel } from "../data";
-import { imageUrl } from '../imageUrl';
-
+import { imageUrl } from "../imageUrl";
 
 const Carousel = () => {
+
+  const windowSize = useRef([window.innerWidth, window.innerHeight]);
   
   const avatarClickHandler = (id) => {
     setAvatarClicked(true);
@@ -21,7 +22,6 @@ const Carousel = () => {
     setActiveAvatar(id);
     setCurrentStoryId(0);
   };
-  
 
   const nextStoryHandler = (storyId) => {
     if (activeAvatar === statusCarousel.length) {
@@ -29,19 +29,17 @@ const Carousel = () => {
       setModalOpenState(false);
     }
     setActiveAvatar(activeAvatar + 1);
-    
-  }
-  
+  };
+
   const prevStoryHandler = (storyId) => {
     setCurrentStoryId(storyId--);
-  }
-  
-  
+  };
+
   const closeButtonHandler = () => {
     setAvatarClicked(false);
     setModalOpenState(false);
   };
-  
+
   const nextButtonHandler = () => {
     console.log("next button clicked");
     if (activeAvatar !== statusCarousel.length) {
@@ -55,16 +53,15 @@ const Carousel = () => {
       setActiveAvatar(activeAvatar - 1);
     }
   };
-  
-  
+
   const [avatarClicked, setAvatarClicked] = useState(false);
   const [activeAvatar, setActiveAvatar] = useState();
   const [modalOpenState, setModalOpenState] = useState(false);
   const [currentStoryId, setCurrentStoryId] = useState();
-  
-  console.log("active story: ", currentStoryId)
-  console.log("active avatar id: ", activeAvatar)
-  console.log(">>>>: ", imageUrl);      // currently returns an array of the urls
+
+  console.log("active story: ", currentStoryId);
+  console.log("active avatar id: ", activeAvatar);
+  console.log(">>>>: ", imageUrl); // currently returns an array of the urls
   return (
     <>
       <div className="carousel-body">
@@ -74,7 +71,9 @@ const Carousel = () => {
               className="avatar-profile-image"
               src={item.img}
               alt=""
-              onClick={() => { avatarClickHandler(item.id) }}
+              onClick={() => {
+                avatarClickHandler(item.id);
+              }}
               key={item.id}
             />
           );
@@ -99,37 +98,42 @@ const Carousel = () => {
                 borderRadius: "0px",
                 outline: "none",
                 padding: "0px",
+                margin: "0px",
+                position: "0px"
               },
             }}
           >
-
             <div className="arrow-icon-container">
-              <ArrowBackIosIcon
-                className="arrow-icon"
+            <ArrowForwardIosIcon
+                className="arrow-icon prev-arrow"
                 style={{
                   fontSize: 40,
                   color: "white",
+                  margin: 0,
+                  padding: 0,
+                  rotate: "180deg",
                 }}
                 onClick={prevButtonHandler}
               />
               <ArrowForwardIosIcon
-                className="arrow-icon"
+                className="arrow-icon next-arrow"
                 style={{
                   fontSize: 40,
                   color: "white",
+                  margin: 0,
+                  padding: 0,
                 }}
                 onClick={nextButtonHandler}
               />
             </div>
 
-
             <div className="story-container">
               <Stories
-                stories={imageUrl[activeAvatar-1]}
+                stories={imageUrl[activeAvatar - 1]}
                 // loop={true}
                 defaultInterval={2500}
                 width={500}
-                height={848}
+                height={832}
                 style={{
                   margin: "0px",
                   padding: "0px",
@@ -137,17 +141,17 @@ const Carousel = () => {
                 onAllStoriesEnd={nextStoryHandler}
                 currentIndex={currentStoryId}
               />
-            </div>
-            
-            <div className="close-icon-container">
-              <CloseIcon
-                className="close-icon"
-                onClick={closeButtonHandler}
-                style={{
-                  fontSize: 40,
-                  color: "white",
-                }}
-              />
+
+              <div className="close-icon-container">
+                <CloseIcon
+                  className="close-icon"
+                  onClick={closeButtonHandler}
+                  style={{
+                    fontSize: 40,
+                    color: "white",
+                  }}
+                />
+              </div>
             </div>
           </ReactModal>
         </>

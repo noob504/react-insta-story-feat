@@ -1,3 +1,9 @@
+#root{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .carousel-body{
     display: flex;
     flex-direction: row;
@@ -40,15 +46,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 3px;
+    position: relative;
+    margin: 0px;
+    padding: 40px 0px;
+    width: 100%;
+
 }
 
 .close-icon-container{
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 2;
+    z-index: 1000;
     margin-right: 32%;
+    /* position: absolute; */
+    cursor: pointer;
 
 }
 
@@ -60,12 +72,141 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 100%;
-    position: relative;
+    width: 100vw;
+    position: absolute;
     top: 50%;
     z-index: 2;
+    padding: 0;
+    margin: 0;
+}
+
+.arrow-icon{
+    margin: 0;
+    padding: 0;
 }
 
 .arrow-icon:hover{
     cursor: pointer;
 }
+
+@media screen and (max-width: 1200px) {
+
+    .arrow-icon-container{
+        justify-content: space-evenly;
+    }
+
+    .arrow-icon{
+        padding: 200px;
+    }
+    
+    .close-icon-container{
+        margin-right: 360px;
+        margin-top: 60px;
+    }
+
+    .story-container{
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .avatar-profile-image{
+        width: 100px;
+        height: 100px;
+    }
+
+    .arrow-icon-container{
+        justify-content: space-between;
+    }
+
+    .arrow-icon{
+        padding-right: 60px;
+    }
+
+    .close-icon-container{
+        margin-right: 260px;
+        margin-top: 60px;
+    }
+    .close-icon:hover{
+        cursor: pointer;
+    }
+
+    .story-container{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .avatar-profile-image{
+        width: 80px;
+        height: 80px;
+    }
+
+    .arrow-icon-container{
+        display: none;
+    }
+
+    .close-icon-container{
+        margin-right: 20px;
+        margin-top: 60px;
+    }
+    .close-icon:hover{
+        cursor: pointer;
+    }
+
+    .story-container{
+        margin: 0;
+    }
+}
+
+
+@media screen and (max-width: 480px){
+    .avatar-profile-image{
+        width: 60px;
+        height: 60px;
+    }
+
+    .arrow-icon-container{
+        display: none;
+    }
+
+    .close-icon-container{
+        margin-right: 3%;
+        margin-top: 8%;
+    }
+    .close-icon:hover{
+        cursor: pointer;
+    }
+
+    .story-container{
+        margin: 0;
+        padding: 20px 0;
+    }
+}
+
+
+@media screen and (max-width: 360px){
+    .avatar-profile-image{
+        width: 50px;
+        height: 50px;
+    }
+
+    .arrow-icon-container{
+        display: none;
+    }
+
+    .close-icon-container{
+        margin-right: 3%;
+        margin-top: 8%;
+    }
+    .close-icon:hover{
+        cursor: pointer;
+    }
+
+    .story-container{
+        margin: 0;
+        padding: 0;
+        padding: 20px 0;
+    }
+}
+    
