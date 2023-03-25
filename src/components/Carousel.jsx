@@ -12,9 +12,8 @@ import { statusCarousel } from "../data";
 import { imageUrl } from "../imageUrl";
 
 const Carousel = () => {
-
   const windowSize = useRef([window.innerWidth, window.innerHeight]);
-  
+
   const avatarClickHandler = (id) => {
     setAvatarClicked(true);
     setModalOpenState(true);
@@ -99,17 +98,17 @@ const Carousel = () => {
                 outline: "none",
                 padding: "0px",
                 margin: "0px",
-                position: "0px"
+                position: "0px",
               },
             }}
           >
             <div className="arrow-icon-container">
-            <ArrowForwardIosIcon
+              <ArrowForwardIosIcon
                 className="arrow-icon prev-arrow"
                 style={{
                   fontSize: 40,
                   color: "white",
-                  margin: 0,
+                  // margin: 0,
                   padding: 0,
                   rotate: "180deg",
                 }}
@@ -120,7 +119,7 @@ const Carousel = () => {
                 style={{
                   fontSize: 40,
                   color: "white",
-                  margin: 0,
+                  // margin: 0,
                   padding: 0,
                 }}
                 onClick={nextButtonHandler}
@@ -132,7 +131,7 @@ const Carousel = () => {
                 stories={imageUrl[activeAvatar - 1]}
                 // loop={true}
                 defaultInterval={2500}
-                width={500}
+                width={360}
                 height={832}
                 style={{
                   margin: "0px",

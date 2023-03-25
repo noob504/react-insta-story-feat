@@ -48,31 +48,26 @@
     justify-content: center;
     position: relative;
     margin: 0px;
-    padding: 40px 0px;
+    padding: 60px 0px;
     width: 100%;
 
 }
 
 .close-icon-container{
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 20px;
+    right: 700px;
     z-index: 1000;
-    margin-right: 32%;
-    /* position: absolute; */
     cursor: pointer;
 
 }
 
-.close-icon:hover{
-    cursor: pointer;
-}
 
 .arrow-icon-container{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    width: 100vw;
+    justify-content: space-between;
+    width: 100%;
     position: absolute;
     top: 50%;
     z-index: 2;
@@ -80,10 +75,14 @@
     margin: 0;
 }
 
-.arrow-icon{
-    margin: 0;
-    padding: 0;
+.next-arrow{
+    margin-right: 32%;
 }
+
+.prev-arrow{
+    margin-left: 32%;
+}
+
 
 .arrow-icon:hover{
     cursor: pointer;
@@ -91,17 +90,17 @@
 
 @media screen and (max-width: 1200px) {
 
-    .arrow-icon-container{
-        justify-content: space-evenly;
+    .next-arrow{
+        margin-right: 20%;
     }
 
-    .arrow-icon{
-        padding: 200px;
+    .prev-arrow{
+        margin-left: 20%;
     }
     
     .close-icon-container{
-        margin-right: 360px;
-        margin-top: 60px;
+        top: 20px;
+        right: 360px;
     }
 
     .story-container{
@@ -109,23 +108,23 @@
     }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 1000px) {
     .avatar-profile-image{
         width: 100px;
         height: 100px;
     }
 
-    .arrow-icon-container{
-        justify-content: space-between;
+    .next-arrow{
+        margin-right: 12%;
     }
 
-    .arrow-icon{
-        padding-right: 60px;
+    .prev-arrow{
+        margin-left: 12%;
     }
 
     .close-icon-container{
-        margin-right: 260px;
-        margin-top: 60px;
+        top: 20px;
+        right: 260px;
     }
     .close-icon:hover{
         cursor: pointer;
@@ -142,13 +141,17 @@
         height: 80px;
     }
 
-    .arrow-icon-container{
-        display: none;
+    .next-arrow{
+        margin-right: 8%;
+    }
+
+    .prev-arrow{
+        margin-left: 8%;
     }
 
     .close-icon-container{
-        margin-right: 20px;
-        margin-top: 60px;
+        top: 20px;
+        right: 60px;
     }
     .close-icon:hover{
         cursor: pointer;
@@ -171,8 +174,8 @@
     }
 
     .close-icon-container{
-        margin-right: 3%;
-        margin-top: 8%;
+        top: 40px;
+        right: 72px;
     }
     .close-icon:hover{
         cursor: pointer;
@@ -196,8 +199,8 @@
     }
 
     .close-icon-container{
-        margin-right: 3%;
-        margin-top: 8%;
+        top: 36px;
+        right: 8px;
     }
     .close-icon:hover{
         cursor: pointer;
