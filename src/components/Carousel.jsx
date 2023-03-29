@@ -11,6 +11,12 @@ import "./Carousel.css";
 import { statusCarousel } from "../data";
 import { imageUrl } from "../imageUrl";
 
+const productDetails = {
+  name: "Lorem ipsum dolor sit amet",
+  price: "₹ 1000",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+};
+
 const Carousel = () => {
   const windowSize = useRef([window.innerWidth, window.innerHeight]);
 
@@ -100,8 +106,7 @@ const Carousel = () => {
                 margin: "0px",
                 position: "0px",
               },
-            }}
-          >
+            }}>
             <div className="arrow-icon-container">
               <ArrowForwardIosIcon
                 className="arrow-icon prev-arrow"
@@ -150,6 +155,22 @@ const Carousel = () => {
                     color: "white",
                   }}
                 />
+              </div>
+
+              <div className="product-preview-container">
+                <div className="product-preview">
+                  <img
+                    src={"https://random.imagecdn.app/120/120"}
+                    alt=""
+                    className="product-image"
+                  />
+                  <div className="product-detail">
+                    <p>{productDetails.name}</p>
+                    <p>Price: {productDetails.price}</p>
+                  </div>
+                </div>
+
+                <div className="see-more">See More</div>
               </div>
             </div>
           </ReactModal>

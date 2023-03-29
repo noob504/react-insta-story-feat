@@ -1,6 +1,13 @@
 export const imageUrl = [
   [
     "https://random.imagecdn.app/500/848",
+    // {
+    //   url: "https://random.imagecdn.app/500/848",
+    //   duration: 2000,
+    //   seeMore: ({ close }) => {
+    //     return (<div onClick={close}>Hello, click to close this.</div>);
+    //   },
+    // },
   ],
 
   [
